@@ -1,3 +1,0 @@
-.idea/
-Work at class/
-GIT_Theory/
