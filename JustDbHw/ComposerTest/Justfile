@@ -1,0 +1,7 @@
+# Run Composer inside docker container (alias)
+c *args:
+    just composer {{args}}
+
+# Run Composer inside docker container (alias)
+composer *args:
+    docker compose exec app composer {{args}}

@@ -1,0 +1,33 @@
+version: '3'
+services:
+  app:
+    container_name: test_DockerAndComposer
+    build:
+      context: ../docker/
+    restart: "always"
+    ports:
+      - "8092:80"
+    volumes:
+      - .:/var/www/html
+    networks:
+      - app_network
+  mysql:
+    image: "mysql:8"
+    restart: "always"
+    ports:
+      - "33062:3306"
+    volumes:
+      - "./mysql:/var/lib/mysql"
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: php_10_24_db
+    networks:
+      - app_network
+
+volumes:
+  example_db_vol:
+    driver: local
+
+networks:
+  app_network:
+    driver: bridge
