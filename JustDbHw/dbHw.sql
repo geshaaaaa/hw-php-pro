@@ -1,4 +1,4 @@
-use php_10_24_db;
+
 CREATE TABLE parks
 (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -41,7 +41,6 @@ CREATE TABLE customers
     id INT AUTO_INCREMENT PRIMARY KEY,
     name varchar(250) NOT NULL,
     phone varchar(250)
-);
 
 
 DROP TABLE parks;
@@ -150,3 +149,4 @@ FROM orders
          INNER JOIN product ON product.id = orders.product_id
          INNER JOIN customers ON customers.id = orders.customer_id
 WHERE customers.name = 'Hennadii';
+
