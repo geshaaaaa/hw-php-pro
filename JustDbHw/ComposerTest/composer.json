@@ -1,9 +1,4 @@
 {
     "name": "root/html",
-    "autoload": {
-        "psr-4": {
-            "Root\\Html\\": "src/"
-        }
-    },
     "require": {}
 }
