@@ -1,0 +1,20 @@
+networks:
+  app_network:
+    driver: bridge
+
+volumes:
+  example_db_vol:
+    driver: local
+
+services:
+  app:
+    container_name: hw9_php
+    build:
+        context: docker/
+    restart: "always"
+    ports:
+      - "8042:80"
+    volumes:
+      - .:/var/www/html
+    networks:
+      - app_network
