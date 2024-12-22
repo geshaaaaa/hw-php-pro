@@ -2,7 +2,13 @@
 
 namespace App\Controllers;
 
-class AuthController
+use Core\Controller;
+class AuthController extends Controller
 {
+    public function register(int $id)
+    {
+        dd(__METHOD__, $id);
+
+    }
 
 }
